@@ -1,0 +1,22 @@
+{
+  "name": "parkease-saas",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ParkEase – Airbnb for parking spots (Admin, Owner, Tenant), PayU payments, real-time Google Maps, Firebase + GCP",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^10.12.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-router-dom": "^6.23.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "vite": "^5.2.0"
+  }
+}
