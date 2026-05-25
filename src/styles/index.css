@@ -1,0 +1,83 @@
+/* ── ParkEase Global Styles ───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #FFFFFF;
+  color: #0A1F14;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --amber: #16A34A;
+  --amber-dark: #15803D;
+  --amber-glow: #16A34A18;
+  --teal: #0D9488;
+  --teal-glow: #0D948820;
+  --green: #059669;
+  --red: #DC2626;
+  --purple: #7C3AED;
+  --text: #0A1F14;
+  --muted: #436B53;
+  --dim: #7EA88E;
+  --surface: #F6FBF8;
+  --card: #FFFFFF;
+  --border: #CEEADB;
+  --border-light: #E2F4EA;
+}
+
+a { color: var(--amber); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F6FBF8; }
+::-webkit-scrollbar-thumb { background: #16A34A55; border-radius: 3px; }
+
+/* Animations */
+.fade-up { animation: fadeUp 0.6s ease both; }
+.fade-up-1 { animation: fadeUp 0.6s 0.1s ease both; }
+.fade-up-2 { animation: fadeUp 0.6s 0.2s ease both; }
+.fade-up-3 { animation: fadeUp 0.6s 0.3s ease both; }
+.fade-up-4 { animation: fadeUp 0.6s 0.4s ease both; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hover-lift {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px #16A34A22;
+}
+
+/* Google Places Autocomplete */
+.pac-container {
+  background: #FFFFFF !important;
+  border: 1.5px solid #CEEADB !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(22,163,74,0.14) !important;
+  margin-top: 6px !important;
+  padding: 4px 0 !important;
+  font-family: 'Inter', sans-serif !important;
+  z-index: 9999 !important;
+}
+.pac-container::after { display: none !important; }
+.pac-item {
+  padding: 10px 16px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  color: #0A1F14 !important;
+  border-top: 1px solid #F0FAF4 !important;
+}
+.pac-item:first-child { border-top: none !important; }
+.pac-item:hover, .pac-item-selected { background: #F6FBF8 !important; }
+.pac-item-query { color: #16A34A !important; font-weight: 600 !important; }
+.pac-matched { color: #16A34A !important; font-weight: 700 !important; }
+.pac-icon { display: none !important; }
